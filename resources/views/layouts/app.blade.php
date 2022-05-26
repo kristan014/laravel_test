@@ -74,41 +74,77 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item {{ request()->segment(1) == 'dashboard' ? 'active' : '' }}">
+            <li class="nav-item border-left border-primary {{ request()->segment(1) == 'dashboard' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Dashboard</span></a>
+                    {{-- <i class="fas fa-fw fa-chart-area"></i> --}}
+                    <img class="p-2 rounded" style="background-color: #1149f033;" src="{{ asset('img/menu-active.png') }}" alt="">
+
+                    {{-- <span>Dashboard</span> --}}
+                </a>
             </li>
 
 
             <!-- Nav Item - Charts -->
             <li class="nav-item {{ request()->segment(1) == 'course' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('courses.index') }}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Courses</span></a>
+                    <img src="{{ asset('img/list.png') }}" alt="">
+
+                    {{-- <span>Courses</span> --}}
+                </a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item {{ request()->segment(1) == 'student' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('students.index') }}">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Students</span></a>
+                    {{-- <i class="fas fa-fw fa-user"></i> --}}
+                    <img src="{{ asset('img/toga.png') }}" alt="">
+
+                    {{-- <span>Students</span> --}}
+                </a>
+            </li>
+
+              <!-- Nav Item - Tables -->
+              <li class="nav-item {{ request()->segment(1) == 'student' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('students.index') }}">
+                    {{-- <i class="fas fa-fw fa-user"></i> --}}
+                    <img src="{{ asset('img/calendar.png') }}" alt="">
+                </a>
+
+            </li>
+
+               <!-- Nav Item - Tables -->
+               <li class="nav-item {{ request()->segment(1) == 'student' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('students.index') }}">
+                    {{-- <i class="fas fa-fw fa-user"></i> --}}
+                    <img src="{{ asset('img/chat.png') }}" alt="">
+                </a>
+
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
+               <!-- Nav Item - Tables -->
+               <li class="nav-item mt-5">
+                <a class="nav-link" href="#">
+                    {{-- <i class="fas fa-fw fa-user"></i> --}}
+                    <img src="{{ asset('img/setting.png') }}" alt="">
+                </a>
+
+            </li>
+
+
             <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
-                    <span>Logout</span>
+                    {{-- <span>Logout</span> --}}
                 </a>
             </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            {{-- <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0 bg-primary" id="sidebarToggle"></button>
-            </div>
+            </div> --}}
 
         </ul>
         <!-- End of Sidebar -->
@@ -136,7 +172,7 @@
                         <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-3 mw-100 navbar-search">
                             <div class="input-group">
                                 <input type="text" class="form-control bg-light border-0 small"
-                                    placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                    placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-light" type="button">
                                         <i class="fas fa-search fa-sm"></i>
@@ -160,9 +196,11 @@
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
+                                {{-- <i class="fas fa-bell fa-fw"></i> --}}
+                                <img src="{{ asset('img/notif.png') }}" alt="notif-icon">
+
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                                {{-- <span class="badge badge-danger badge-counter">3+</span> --}}
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"

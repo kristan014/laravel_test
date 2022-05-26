@@ -11,7 +11,7 @@
 
             <div class="row">
                 <div class="col-md-5 mr-2">
-                    <h5>Knowledge base</h5>
+                    <h5 class="text-dark font-weight-bold"><strong>Knowledge base</strong></h5>
 
                     <!-- Area Chart -->
                     <div class="card shadow mb-4">
@@ -29,7 +29,8 @@
                 </div>
 
                 <div class="col-md-6">
-                    <h5>User Profile</h5>
+                    <h5 class="text-dark font-weight-bold"><strong>User Profile</strong></h5>
+
 
                 </div>
             </div>
